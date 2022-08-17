@@ -1,0 +1,48 @@
+Script started on 2022-06-21 09:41:53+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="149" LINES="35"]
+]0;root@TIGER03346: ~root@TIGER03346:~# ^V^?[K[Ksudo apt install git-all
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+[1;31mE: [0mUnable to locate package git-all[0m
+]0;root@TIGER03346: ~root@TIGER03346:~# git --version
+git version 2.25.1
+]0;root@TIGER03346: ~root@TIGER03346:~# sudo dnf install dh-autoreconf curl-devel expat-devel gettext-devel \
+>   openssl-devel perl-devel zlib-devel
+sudo: dnf: command not found
+]0;root@TIGER03346: ~root@TIGER03346:~# ^V^?[K[Ksudo dnf install asciidoc xmlto docbook2X
+sudo: dnf: command not found
+]0;root@TIGER03346: ~root@TIGER03346:~# sudo apt-get install asciidoc xmlto docbook2x
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+E: Unable to locate package asciidoc
+E: Unable to locate package xmlto
+E: Unable to locate package docbook2x
+]0;root@TIGER03346: ~root@TIGER03346:~# sudo apt-get install install-info
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+install-info is already the newest version (6.7.0.dfsg.2-5).
+install-info set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+]0;root@TIGER03346: ~root@TIGER03346:~# tar -zxf git -[K[K-2.8.0.tar.gz
+tar (child): git-2.8.0.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+]0;root@TIGER03346: ~root@TIGER03346:~# git config --list --show-origin
+[?1h=[K[?1l>]0;root@TIGER03346: ~root@TIGER03346:~# git config --list --show-origin
+[?1h=[K[?1l>]0;root@TIGER03346: ~root@TIGER03346:~# git config --global user.name "John Doe"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"A"d"i"t"y"a" "S"I"n"g"h"[1P"[1P"[1P"[1P"i"n"g"h"[C
+]0;root@TIGER03346: ~root@TIGER03346:~# git config --global user.email johndoe@example.com[C[C[C[C[C[C[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.com[1P.coma.comd.comi.comt.comy.coma.com[C.coms.comi.comn.comg.comh.com@.comt.comi.comg.come.comr.coma.comn.coma.coml.comy.comt.comi.comc.coms.com[C[C[C[C
+]0;root@TIGER03346: ~root@TIGER03346:~# git config --global user.email aditya.singh@tigeranalytics.com[18Pname "Aditya Singh"[13Plist --show-origin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Ptar -zxf git-2.8.0.tar.gz[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo apt-get install install-infoasciidoc xmlto docbook2x[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pdnf install asciidoc xmlto docbook2X[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Capt-get install asciidoc xmlto docbook2x[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pdnf install asciidoc xmlto docbook2Xdh-autoreconf curl-devel expat-devel gettext-devel   openssl-devel perl-devel zlib-devel[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Casciidoc xmlto docbook2X[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Capt-get install asciidoc xmlto docbook2x[12Pinstall-info[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Ptar -zxf git-2.8.0.tar.gz[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit config --list --show-originglobal user.name "Aditya Singh"[13Plist --show-origin
+[?1h=file:/root/.gitconfig   user.name=Aditya Singh[m
+file:/root/.gitconfig   user.email=aditya.singh@tigeranalytics.com[m
+[K[?1l>]0;root@TIGER03346: ~root@TIGER03346:~# got [K[K[Kit config uder.name
+]0;root@TIGER03346: ~root@TIGER03346:~# git config uder.name[1Per.nameser.name
+Aditya Singh
+]0;root@TIGER03346: ~root@TIGER03346:~# git config user.name[K[K[K[Kemail
+aditya.singh@tigeranalytics.com
+]0;root@TIGER03346: ~root@TIGER03346:~# exit
+exit
+
+Script done on 2022-06-21 20:16:48+05:30 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,251 @@
+Script started on 2022-06-28 14:08:22+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="149" LINES="35"]
+]0;root@TIGER03346: ~root@TIGER03346:~# git clone https://<token>@github.com/owner/repo.git^V[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit clone https://< 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 >@github.com/tonychacon/blink.git[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd blink/
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# git clone https://< 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 >@github.com/tonychacon/blink.git
+bash: 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: No such file or directory
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# git config.email
+git: 'config.email' is not a git command. See 'git --help'.
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# git config --global user.email
+aditya.singh@tigeranalytics.com
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# ssh-keygen -t ed25519 -C " aditya.singh@tigeranalytics.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/root/.ssh/id_ed25519): 
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_ed25519
+Your public key has been saved in /root/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:8YBmQ3bI6mVOeqSW9lZiJW5++1LQxGli085HNRiMFnI  aditya.singh@tigeranalytics.com
+The key's randomart image is:
++--[ED25519 256]--+
+|     .o.ooE=.+o  |
+|     ooo+oO +  . |
+|     .=.oX .     |
+|    .o*.o++ .    |
+|   . @ oS...     |
+|    B B . .      |
+|   o * o .       |
+|      + o        |
+|     . ..+.      |
++----[SHA256]-----+
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink#  git clone https://github.com/tonychacon/blink
+Cloning into 'blink'...
+remote: Enumerating objects: 23, done.[K
+remote: Total 23 (delta 0), reused 0 (delta 0), pack-reused 23[K
+Unpacking objects:   4% (1/23)Unpacking objects:   8% (2/23)Unpacking objects:  13% (3/23)Unpacking objects:  17% (4/23)Unpacking objects:  21% (5/23)Unpacking objects:  26% (6/23)Unpacking objects:  30% (7/23)Unpacking objects:  34% (8/23)Unpacking objects:  39% (9/23)Unpacking objects:  43% (10/23)Unpacking objects:  47% (11/23)Unpacking objects:  52% (12/23)Unpacking objects:  56% (13/23)Unpacking objects:  60% (14/23)Unpacking objects:  65% (15/23)Unpacking objects:  69% (16/23)Unpacking objects:  73% (17/23)Unpacking objects:  78% (18/23)Unpacking objects:  82% (19/23)Unpacking objects:  86% (20/23)Unpacking objects:  91% (21/23)Unpacking objects:  95% (22/23)Unpacking objects: 100% (23/23)Unpacking objects: 100% (23/23), 2.60 KiB | 140.00 KiB/s, done.
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# cdb[K[K [Kd blink/
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# gir=[K[Kt chech=[K[Kkout -b slow-blink
+Switched to a new branch 'slow-blink'
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# sed -i '' 's/1000/3000/' blink.ino (macOS)
+bash: syntax error near unexpected token `('
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# sed -i '' 's/1000/3000/' blink.ino (macOS)[K[K[K[K[K[K[K[K
+sed: can't read s/1000/3000/: No such file or directory
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# nano new_file.text
+[?2004h[?1049h[22;0;0t[1;35r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[33;69H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 4.8                                                        new_file.text                                                                  [1;148H(B[m[34d(B[0;7m^G(B[m Get Help     (B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify[81G(B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[34;113H(B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35d(B[0;7m^X(B[m Exit[35;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[35;113H(B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2d[39;49m(B[m[?12l[?25h[?25l[1;140H(B[0;7mModified(B[m[2d"[?12l[?25h[?25l[K[?12l[?25h[?25lJ[?12l[?25h[?25lU[?12l[?25h[?25l [?12l[?25h[?25l[K[?12l[?25h[?25l[?12l[?25h[?25l"[?12l[?25h[?25lj[?12l[?25h[?25lu[?12l[?25h[?25ls[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25li[?12l[?25h[?25ll[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25lm[?12l[?25h[?25la[?12l[?25h[?25lk[33d[K[2;20H[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25lc[?12l[?25h[?25lh[?12l[?25h[?25la[?12l[?25h[?25ln[?12l[?25h[?25lg[?12l[?25h[?25le[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25l [?12l[?25h[?25lr[?12l[?25h[?25le[?12l[?25h[?25lp[?12l[?25h[?25lo[?12l[?25h[?25l"[?12l[?25h[?25l[34;17H[21X[34;38H(B[0;7mM-D(B[m DOS Format[23X[34;75H(B[0;7mM-A(B[m Append      [97G        [112G(B[0;7mM-B(B[m Backup File[K[35;2H(B[0;7mC(B[m Cancel[17G[21X[35;38H(B[0;7mM-M(B[m Mac Format[23X[35;75H(B[0;7mM-P(B[m Prepend[19X[35;112H(B[0;7m^T(B[m To Files[K[33d(B[0;7mFile Name to Write: new_file.text                                                                                                                    [33;1H(B[m[33;34H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2;38H[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                                [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[?12l[?25h[?25l[34d(B[0;7m^G(B[m Get Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m To Files[33d(B[0;7mFile Name to Write: new_file.text(B[m[33;34H[?12l[?25h[?25l[33;67H[1K (B[0;7m[ Writing... ](B[m[K[1;140H(B[0;7m        (B[m[33;67H(B[0;7m[ Wrote 1 line ](B[m[J[35d[?12l[?25h[35;1H[?1049l[23;0;0t[?1l>[?2004l]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git status
+On branch slow-blink
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mnew_file.text[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git comit[K[Kmit -a -m "changes in repu[Ko while making a test [K[K[Kxt file"
+On branch slow-blink
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mnew_file.text[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git commit -a -m "changes in repo while making a text file"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[K
+On branch slow-blink
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mnew_file.text[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git -[K[K[K[K[Kgit statuscommit -a -m "changes in repo while making a text file"
+On branch slow-blink
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mnew_file.text[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# gir [K[Kt commit -A
+error: unknown switch `A'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# gir [K[Kt add _[K-A
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git add -A[3@commit[C[C[Ca -m "changes in repo while making a text file"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[K
+On branch slow-blink
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   new_file.text[m
+
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git statusadd -A[3@commit[C[C[C[K[K"[K-m "changes in repu=o[K[K[Kp[Ko"
+[slow-blink 50d3b12] changes in repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new_file.text
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git commit -m "changes in repo"status[K
+On branch slow-blink
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git push origin slow-blink
+Username for 'https://github.com': Aditya-A Singh-3757
+Password for 'https://Aditya-Singh-3757@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/tonychacon/blink/'
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# cs[Kd ..
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# l[Kgit ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+	lfs
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# git cloneblink[K[K[K[K[K git@github.com:Aditya-Singh-3757/blink.git
+Cloning into 'blink'...
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,13.234.176.102' (ECDSA) to the list of known hosts.
+remote: Enumerating objects: 9, done.[K
+remote: Total 9 (delta 0), reused 0 (delta 0), pack-reused 9[K
+Receiving objects:  11% (1/9)Receiving objects:  22% (2/9)Receiving objects:  33% (3/9)Receiving objects:  44% (4/9)Receiving objects:  55% (5/9)Receiving objects:  66% (6/9)Receiving objects:  77% (7/9)Receiving objects:  88% (8/9)Receiving objects: 100% (9/9)Receiving objects: 100% (9/9), done.
+Resolving deltas:   0% (0/1)Resolving deltas: 100% (1/1)Resolving deltas: 100% (1/1), done.
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# cd blink/
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git checkout -b slow-blink
+Switched to a new branch 'slow-blink'
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git status
+On branch slow-blink
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# n[Kgit[K[K[Kgit status[Kgit statuscheckout -b slow-blink[17Pcd blink/git clone git@github.com:Aditya-Singh-3757/blink.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K[1Pcd ..git push origin slow-blinkstatus[Kcommit -m "changes in repo"status[Kadd -A[3@commit[C[C[Ca -m "changes in repo while making a text file"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kcommit -a -m "changes in repo while making a text file"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Knano new_file.text
+[?2004h[?1049h[22;0;0t[1;35r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[33;69H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 4.8                                                        new_file.text                                                                  [1;148H(B[m[34d(B[0;7m^G(B[m Get Help     (B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify[81G(B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[34;113H(B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35d(B[0;7m^X(B[m Exit[35;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[35;113H(B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2d[39;49m(B[m[?12l[?25h[?25l[1;140H(B[0;7mModified(B[m[2d"[?12l[?25h[?25ln[?12l[?25h[?25le[?12l[?25h[?25lw[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25li[?12l[?25h[?25ll[?12l[?25h[?25le[?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25lo[?12l[?25h[?25l [?12l[?25h[?25lm[?12l[?25h[?25lo[?12l[?25h[?25ld[?12l[?25h[?25li[?12l[?25h[?25lf[?12l[?25h[?25ly[?12l[?25h[?25l [?12l[?25h[?25lr[?12l[?25h[?25le[?12l[?25h[?25lp[?12l[?25h[?25lu[?12l[?25h[?25l [?12l[?25h[?25lo[33d[K[2;25H[?12l[?25h[?25l"[?12l[?25h[?25l[34;17H[21X[34;38H(B[0;7mM-D(B[m DOS Format[23X[34;75H(B[0;7mM-A(B[m Append      [97G        [112G(B[0;7mM-B(B[m Backup File[K[35;2H(B[0;7mC(B[m Cancel[17G[21X[35;38H(B[0;7mM-M(B[m Mac Format[23X[35;75H(B[0;7mM-P(B[m Prepend[19X[35;112H(B[0;7m^T(B[m To Files[K[33d(B[0;7mFile Name to Write: new_file.text                                                                                                                    [33;1H(B[m[33;34H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2;26H[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                                [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Get Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m To Files[33d(B[0;7mFile Name to Write: new_file.text(B[m[33;34H[?12l[?25h[?25l[33;67H[1K (B[0;7m[ Writing... ](B[m[K[1;140H(B[0;7m        (B[m[33;67H(B[0;7m[ Wrote 1 line ](B[m[J[35d[?12l[?25h[35;1H[?1049l[23;0;0t[?1l>[?2004l]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git sy[Ka[Ktay[Ktus
+On branch slow-blink
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mnew_file.text[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git add -A
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git add -Astatus
+On branch slow-blink
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   new_file.text[m
+
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# f[Kgit commit -m "changes in repo"
+[slow-blink 662aef1] changes in repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new_file.text
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git commit -m "changes in repo"status[Kadd -Astatusnano new_file.text[8Pgit statuscheckout -b slow-blink[17Pcd blink/git clone git@github.com:Aditya-Singh-3757/blink.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K[1Pcd ..git push origin slow-blink
+Enumerating objects: 4, done.
+Counting objects:  25% (1/4)Counting objects:  50% (2/4)Counting objects:  75% (3/4)Counting objects: 100% (4/4)Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects:  50% (1/2)Compressing objects: 100% (2/2)Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 350 bytes | 350.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'slow-blink' on GitHub by visiting:[K
+remote:      https://github.com/Aditya-Singh-3757/blink/pull/new/slow-blink[K
+remote: 
+To github.com:Aditya-Singh-3757/blink.git
+ * [new branch]      slow-blink -> slow-blink
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git remote add upstream https://github.com/schacon/blink
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git fetch upstream
+From https://github.com/schacon/blink
+ * [new branch]      master     -> upstream/master
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# git merge upstream/master
+Already up to date.
+]0;root@TIGER03346: ~/blink/blinkroot@TIGER03346:~/blink/blink# cd ..
+]0;root@TIGER03346: ~/blinkroot@TIGER03346:~/blink# cd ..
+]0;root@TIGER03346: ~root@TIGER03346:~# gitk
+
+Command 'gitk' not found, but can be installed with:
+
+apt install gitk
+
+]0;root@TIGER03346: ~root@TIGER03346:~# apt install gitk
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+Package gitk is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+[1;31mE: [0mPackage 'gitk' has no installation candidate[0m
+]0;root@TIGER03346: ~root@TIGER03346:~# cd n[Kn[KNew\ folder/
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git [Kk
+
+Command 'gitk' not found, but can be installed with:
+
+apt install gitk
+
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# gitkcd New\ folder/apt install gitk
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+Package gitk is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+[1;31mE: [0mPackage 'gitk' has no installation candidate[0m
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git gui
+fatal: 'gui' appears to be a git command, but we were not
+able to execute it. Maybe git-gui is broken?
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# cd .git
+]0;root@TIGER03346: ~/New folder/.gitroot@TIGER03346:~/New folder/.git# cd .gitgit gui
+fatal: 'gui' appears to be a git command, but we were not
+able to execute it. Maybe git-gui is broken?
+]0;root@TIGER03346: ~/New folder/.gitroot@TIGER03346:~/New folder/.git# cd ..
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# cd ..
+]0;root@TIGER03346: ~root@TIGER03346:~# which git
+/usr/bin/git
+]0;root@TIGER03346: ~root@TIGER03346:~# cd u[K[K[K[Kexit
+exit
+
+Script done on 2022-06-28 16:29:38+05:30 [COMMAND_EXIT_CODE="0"]

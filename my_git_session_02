@@ -1,0 +1,834 @@
+Script started on 2022-06-22 09:29:07+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="149" LINES="35"]
+]0;root@TIGER03346: ~root@TIGER03346:~# script -a ~/my_git_session[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cclear[Kd Desktop:[K[K[Kgit --version
+git version 2.25.1
+]0;root@TIGER03346: ~root@TIGER03346:~# git config --list --show-origin
+[?1h=file:/root/.gitconfig   user.name=Aditya Singh[m
+file:/root/.gitconfig   user.email=aditya.singh@tigeranalytics.com[m
+[K[?1l>]0;root@TIGER03346: ~root@TIGER03346:~# git config --global init.defaultBranch main
+]0;root@TIGER03346: ~root@TIGER03346:~# git config --list
+[?1h=user.name=Aditya Singh[m
+user.email=aditya.singh@tigeranalytics.com[m
+init.defaultbranch=main[m
+[K[?1l>]0;root@TIGER03346: ~root@TIGER03346:~# git config <key>:
+bash: key: No such file or directory
+]0;root@TIGER03346: ~root@TIGER03346:~# git config <key>:[K
+bash: syntax error near unexpected token `newline'
+]0;root@TIGER03346: ~root@TIGER03346:~# git cinfig [K[K[K[K[K[Kong[Kfig userna[K[K.name
+Aditya Singh
+]0;root@TIGER03346: ~root@TIGER03346:~# git help <verb>
+bash: syntax error near unexpected token `newline'
+]0;root@TIGER03346: ~root@TIGER03346:~# git help config
+[?1049h[22;0;0t[?1h=GIT-CONFIG(1)                                                       Git Manual                                                      GIT-CONFIG(1)[m
+[m
+[1mNAME[0m[m
+       git-config - Get and set repository or global options[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [-z|--null] name [value [value_regex]][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] --add name value[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] --replace-all name value [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [-z|--null] --get name [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [-z|--null] --get-all name [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [-z|--null] [--name-only] --get-regexp name_regex [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [-z|--null] --get-urlmatch name URL[m
+       [4mgit[24m [4mconfig[24m [<file-option>] --unset name [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] --unset-all name [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] --rename-section old_name new_name[m
+       [4mgit[24m [4mconfig[24m [<file-option>] --remove-section name[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--show-origin] [-z|--null] [--name-only] -l | --list[m
+       [4mgit[24m [4mconfig[24m [<file-option>] --get-color name [default][m
+       [4mgit[24m [4mconfig[24m [<file-option>] --get-colorbool name [stdout-is-tty][m
+       [4mgit[24m [4mconfig[24m [<file-option>] -e | --edit[m
+[m
+[1mDESCRIPTION[0m[m
+       You can query/set/replace/unset options with this command. The name is actually the section and the key separated by a dot, and the value[m
+       will be escaped.[m
+[m
+       Multiple lines can be added to an option by using the [1m--add[0m option. If you want to update or unset an option which can occur on multiple[m
+       lines, a POSIX regexp [1mvalue_regex[0m needs to be given. Only the existing values that match the regexp are updated or unset. If you want to[m
+       handle the lines that do [1mnot[0m match the regex, just prepend a single exclamation mark in front (see also the section called “EXAMPLES”).[m
+[m
+       The [1m--type=<type>[0m option instructs [4mgit[24m [4mconfig[24m to ensure that incoming and outgoing values are canonicalize-able under the given <type>. If[m
+       no [1m--type=<type>[0m is given, no canonicalization will be performed. Callers may unset an existing [1m--type[0m specifier with [1m--no-type[0m.[m
+[m
+       When reading, the values are read from the system, global and repository local configuration files by default, and options [1m--system[0m,[m
+[7m Manual page git-config(1) line 1 (press h for help or q to quit)[27m[K[K...skipping...
+[m
+                   [1mSUMMARY[0m [1mOF[0m [1mLESS[0m [1mCOMMANDS[0m[m
+[m
+      Commands marked with * may be preceded by a number, [4mN[24m.[m
+      Notes in parentheses indicate the behavior if [4mN[24m is given.[m
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.[m
+[m
+  h  H                 Display this help.[m
+  q  :q  Q  :Q  ZZ     Exit.[m
+ ---------------------------------------------------------------------------[m
+[m
+                           [1mMOVING[0m[m
+[m
+  e  ^E  j  ^N  CR  *  Forward  one line   (or [4mN[24m lines).[m
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or [4mN[24m lines).[m
+  f  ^F  ^V  SPACE  *  Forward  one window (or [4mN[24m lines).[m
+  b  ^B  ESC-v      *  Backward one window (or [4mN[24m lines).[m
+  z                 *  Forward  one window (and set window to [4mN[24m).[m
+  w                 *  Backward one window (and set window to [4mN[24m).[m
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.[m
+  d  ^D             *  Forward  one half-window (and set half-window to [4mN[24m).[m
+  u  ^U             *  Backward one half-window (and set half-window to [4mN[24m).[m
+  ESC-)  RightArrow *  Right one half screen width (or [4mN[24m positions).[m
+  ESC-(  LeftArrow  *  Left  one half screen width (or [4mN[24m positions).[m
+  ESC-}  ^RightArrow   Right to last column displayed.[m
+  ESC-{  ^LeftArrow    Left  to first column.[m
+  F                    Forward forever; like "tail -f".[m
+  ESC-F                Like F but stop when search pattern is found.[m
+  r  ^R  ^L            Repaint screen.[m
+  R                    Repaint screen, discarding buffered input.[m
+        ---------------------------------------------------[m
+        Default "window" is the screen height.[m
+        Default "half-window" is half of the screen height.[m
+ ---------------------------------------------------------------------------[m
+[7mHELP -- Press RETURN for more, or q when done[27m[K...skipping...
+GIT-CONFIG(1)                                                       Git Manual                                                      GIT-CONFIG(1)[m
+[m
+[1mNAME[0m[m
+       git-config - Get and set repository or global options[m
+[m
+[1mSYNOPSIS[0m[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [-z|--null] name [value [value_regex]][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] --add name value[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] --replace-all name value [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [-z|--null] --get name [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [-z|--null] --get-all name [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [--show-origin] [-z|--null] [--name-only] --get-regexp name_regex [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--type=<type>] [-z|--null] --get-urlmatch name URL[m
+       [4mgit[24m [4mconfig[24m [<file-option>] --unset name [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] --unset-all name [value_regex][m
+       [4mgit[24m [4mconfig[24m [<file-option>] --rename-section old_name new_name[m
+       [4mgit[24m [4mconfig[24m [<file-option>] --remove-section name[m
+       [4mgit[24m [4mconfig[24m [<file-option>] [--show-origin] [-z|--null] [--name-only] -l | --list[m
+       [4mgit[24m [4mconfig[24m [<file-option>] --get-color name [default][m
+       [4mgit[24m [4mconfig[24m [<file-option>] --get-colorbool name [stdout-is-tty][m
+       [4mgit[24m [4mconfig[24m [<file-option>] -e | --edit[m
+[m
+[1mDESCRIPTION[0m[m
+       You can query/set/replace/unset options with this command. The name is actually the section and the key separated by a dot, and the value[m
+       will be escaped.[m
+[m
+       Multiple lines can be added to an option by using the [1m--add[0m option. If you want to update or unset an option which can occur on multiple[m
+       lines, a POSIX regexp [1mvalue_regex[0m needs to be given. Only the existing values that match the regexp are updated or unset. If you want to[m
+       handle the lines that do [1mnot[0m match the regex, just prepend a single exclamation mark in front (see also the section called “EXAMPLES”).[m
+[m
+       The [1m--type=<type>[0m option instructs [4mgit[24m [4mconfig[24m to ensure that incoming and outgoing values are canonicalize-able under the given <type>. If[m
+       no [1m--type=<type>[0m is given, no canonicalization will be performed. Callers may unset an existing [1m--type[0m specifier with [1m--no-type[0m.[m
+[m
+       When reading, the values are read from the system, global and repository local configuration files by default, and options [1m--system[0m,[m
+[7m Manual page git-config(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t]0;root@TIGER03346: ~root@TIGER03346:~# git add -h
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+]0;root@TIGER03346: ~root@TIGER03346:~# cd /home/user/my_project
+bash: cd: /home/user/my_project: No such file or directory
+]0;root@TIGER03346: ~root@TIGER03346:~# cd /home/user/my_project[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmy_
+my_git_project/    my_git_session     my_git_session_02  my_unix_session    my_unix_session_2  
+]0;root@TIGER03346: ~root@TIGER03346:~# cd my_git/-[K[K[Ki[Kt-[K_project/
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git init
+Initialized empty Git repository in /root/my_git_project/.git/
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add *.c
+fatal: pathspec '*.c' did not match any files
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add LICENSE
+fatal: pathspec 'LICENSE' did not match any files
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git commit -m 'Initial project version'
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git commit -m 'Initial project version'add LICENSE[K[4P*.c[3Pinitcd my_git_project//home/user/my_project[14Pgit add -hhelp config<verb>config user.name[4P<key>:--listglobal init.defaultBranch mainlist[K
+[?1h=user.name=Aditya Singh[m
+user.email=aditya.singh@tigeranalytics.com[m
+init.defaultbranch=main[m
+core.repositoryformatversion=0[m
+core.filemode=true[m
+core.bare=false[m
+core.logallrefupdates=true[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# echo "my_git_project" :[K> README
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mREADME[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add README 
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# gir [K[Kt status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# CONTRIBUTING.ms[Kd
+CONTRIBUTING.md: command not found
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add CONTRIBUTING.md
+fatal: pathspec 'CONTRIBUTING.md' did not match any files
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status -s
+[32mA[m  README
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status --short
+[32mA[m  README
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# echo "my_git_project" > ignore_this_file.a
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mignore_this_file.a[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# *.a
+ignore_this_file.a: command not found
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# cat[K[K[K*.agit status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mignore_this_file.a[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# cat .gitignore
+cat: .gitignore: No such file or directory
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# cat .gitignore[C[C[1P .gitignore[1P .gitignore[1P .gitignore[C[C[C[C[C[C[C[C[C[C[C
+.gitignore: command not found
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# touch.[K .gitignore
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# touch .gitignore[2Pcat[C[C[C[C[C[C[C[C[C[C[C[4Pgit status*.a[K[K[K[Kgit statusecho "my_git_project" > ignore_this_file.a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pgit status --shortecho "my_git_project" > ignore_this_file.a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit status[K[Kgit status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.gitignore[m
+	[31mignore_this_file.a[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   README[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m.gitignore[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -A
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -Astatus
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   .gitignore[m
+	[32mnew file:   README[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   .gitignore[m
+	[32mnew file:   README[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   .gitignore[m
+	[32mnew file:   README[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git fi[K[K[K [K dig[Kff
+[?1h=[1mdiff --git a/README b/README[m[m
+[1mindex 806cd23..193f02e 100644[m[m
+[1m--- a/README[m[m
+[1m+++ b/README[m[m
+[36m@@ -1 +1,3 @@[m[m
+ my_git_project[m[m
+[32m+[m[m
+[32m+[m[32mI am writting this to see the difference b/w git status and git diff.[m[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git diff --staged
+[?1h=[1mdiff --git a/.gitignore b/.gitignore[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..9ddbdee[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/.gitignore[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32mignore_this_file.a[m[m
+\ No newline at end of file[m[m
+[1mdiff --git a/README b/README[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..806cd23[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/README[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32mmy_git_project[m[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git diff [K --ch[Kached
+[?1h=[1mdiff --git a/.gitignore b/.gitignore[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..9ddbdee[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/.gitignore[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32mignore_this_file.a[m[m
+\ No newline at end of file[m[m
+[1mdiff --git a/README b/README[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..806cd23[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/README[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32mmy_git_project[m[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git diff --cachedstaged[Kstatus
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   .gitignore[m
+	[32mnew file:   README[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   README[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -A
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -A
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -Astatus
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   .gitignore[m
+	[32mnew file:   README[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git commit
+hint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;35r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[33;68H(B[0;7m[ Reading... ](B[m[33;67H(B[0;7m[ Read 12 lines ](B[m[H(B[0;7m  GNU nano 4.8                                            /root/New folder/.git/COMMIT_EDITMSG                                                       [1;148H(B[m[34d(B[0;7m^G(B[m Get Help     (B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify[81G(B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[34;113H(B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35d(B[0;7m^X(B[m Exit[35;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[35;113H(B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[3d[39;49m[36m# Please enter the commit message for your changes. Lines starting[4d# with '#' will be ignored, and an empty message aborts the commit.[5d#[6d# On branch master[7d#[8d# Initial commit[9d#[10d# Changes to be committed:[11d#       new file:   .gitignore[12d#       new file:   README[13d#[2d[39m(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[1;140H(B[0;7mModified(B[m[2d[36m#[39m(B[m[?12l[?25h[?25l[36mt[39m(B[m[?12l[?25h[?25l[36mh[39m(B[m[?12l[?25h[?25l[36mi[39m(B[m[?12l[?25h[?25l[36ms[39m(B[m[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[K[?12l[?25h[?25lt[?12l[?25h[?25lh[?12l[?25h[?25li[?12l[?25h[?25ls[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[K[?12l[?25h[?25l[36m#[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mt[39m(B[m[?12l[?25h[?25l[36mh[33d[39m(B[m[K[2;5H[?12l[?25h[?25l[36mi[39m(B[m[?12l[?25h[?25l[36ms[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mi[39m(B[m[?12l[?25h[?25l[36mf[39m(B[m[?12l[?25h[?25l [?12l[?25h[?25l[36ms[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mm[39m(B[m[?12l[?25h[?25l[36my[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mf[39m(B[m[?12l[?25h[?25l[36mi[39m(B[m[?12l[?25h[?25l[36mr[39m(B[m[?12l[?25h[?25l[36ms[39m(B[m[?12l[?25h[?25l[36mt[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mc[39m(B[m[?12l[?25h[?25l[36mo[39m(B[m[?12l[?25h[?25l[36mm[39m(B[m[?12l[?25h[?25l[36mm[39m(B[m[?12l[?25h[?25l[36mi[39m(B[m[?12l[?25h[?25l[36mt[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36ma[39m(B[m[?12l[?25h[?25l[36mf[39m(B[m[?12l[?25h[?25l[36mt[39m(B[m[?12l[?25h[?25l[36me[39m(B[m[?12l[?25h[?25l[36mr[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mt[39m(B[m[?12l[?25h[?25l[36mh[39m(B[m[?12l[?25h[?25l[36me[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mr[39m(B[m[?12l[?25h[?25l[36me[39m(B[m[?12l[?25h[?25l[36ma[39m(B[m[?12l[?25h[?25l[36md[39m(B[m[?12l[?25h[?25l[36mm[39m(B[m[?12l[?25h[?25l[36me[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mf[39m(B[m[?12l[?25h[?25l[36mi[39m(B[m[?12l[?25h[?25l[36ml[39m(B[m[?12l[?25h[?25l[36me[39m(B[m[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l[36ma[39m(B[m[?12l[?25h[?25l[36mn[39m(B[m[?12l[?25h[?25l[36md[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mi[39m(B[m[?12l[?25h[?25l[36mg[39m(B[m[?12l[?25h[?25l[36mn[39m(B[m[?12l[?25h[?25l[36mo[39m(B[m[?12l[?25h[?25l[36mr[39m(B[m[?12l[?25h[?25l[36me[39m(B[m[?12l[?25h[?25l[36m [39m(B[m[?12l[?25h[?25l[36mf[39m(B[m[?12l[?25h[?25l[36mi[39m(B[m[?12l[?25h[?25l[36ml[39m(B[m[?12l[?25h[?25l[36me[39m(B[m[?12l[?25h[?25l[36m.[39m(B[m[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                                [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Get Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m To Files[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG(B[m[33;57H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2;60H[?12l[?25h[?25l7[3;32r8[3dM[1;35r[3;1H[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                                [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Get Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m To Files[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG(B[m[33;57H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[3d[?12l[?25h[?25l7[3;32r8M[1;35r[4;1H[?12l[?25h[?25l[3;32r[32;1H
+[1;35r[3;1H[?12l[?25h[?25l[34;17H[21X[34;38H(B[0;7mM-D(B[m DOS Format[23X[34;75H(B[0;7mM-A(B[m Append      [97G        [112G(B[0;7mM-B(B[m Backup File[K[35;2H(B[0;7mC(B[m Cancel[17G[21X[35;38H(B[0;7mM-M(B[m Mac Format[23X[35;75H(B[0;7mM-P(B[m Prepend[19X[35;112H(B[0;7m^T(B[m To Files[K[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG                                                                                             [33;1H(B[m[33;57H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[3d[?12l[?25h[?25l7[3;32r8M[1;35r[4;1H[?12l[?25h[?25l[3;32r[32;1H
+[1;35r[3;1H[?12l[?25h[?25l[3;32r[32;1H
+[1;35r[2;60H[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                                [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Get Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m To Files[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG(B[m[33;57H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2;60H[?12l[?25h[?25l7[3;32r8[3dM[1;35r[3;1H[?12l[?25h[?25l[3;32r[32;1H
+[1;35r[2;60H[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                                [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Get Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m To Files[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG(B[m[33;57H[?12l[?25h[?25l[33;67H[1K (B[0;7m[ Writing... ](B[m[K[1;140H(B[0;7m        (B[m[33;66H(B[0;7m[ Wrote 12 lines ](B[m[J[35d[?12l[?25h[35;1H[?1049l[23;0;0t[?1l>[?2004l[KAborting commit due to empty commit message.
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git commitstatus
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	[32mnew file:   .gitignore[m
+	[32mnew file:   README[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git comit[K[Kmit -m "my first commit after adding readme and of[Kg[K[Kignore file"
+[master (root-commit) d5a4f9e] my first commit after adding readme and ignore file
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git commit -m "my first commit after adding readme and ignore file"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[K
+On branch master
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git rm --cached README 
+rm 'README'
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git rm --cached README status[K
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mdeleted:    README[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mREADME[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -A
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -Astatus
+On branch master
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git mv read[K[K[K[KREADME [K[K[K[K[K[K[K[K[K[K[K[K[K[Ktouch text.txt
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# ls
+README  ignore_this_file.a  text.txt
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# m[Kgit mv text.txt  new_text
+fatal: not under version control, source=text.txt, destination=new_text
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git mv text.txt  new_text.txt
+fatal: not under version control, source=text.txt, destination=new_text.txt
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# m[Kgit mv read[K[K[K[KRe[KEADME.md t[KREADME
+fatal: bad source, source=README.md, destination=README
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# echoi[K "my_git_project" > txt[K[K[Knew_text.txt
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git mv new_text.txt remane.txt
+fatal: not under version control, source=new_text.txt, destination=remane.txt
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git mv new_text.txt remane.txt[C[1@n[11@ew_text.txt[C[C[C[C[C[C[C[7@new_tex[5@t.txt[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit mv /ne[K[K^?[K[K/NewFOlo[K[K[K[K folder/[K[1P[1@\[C[C[C[C[C[C[C[C[C[C[C[C\neecho "my_git_project" > new_text.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pgit mv \New folder\new_test[K[Kxt.txt re[K[K\New folder\rename.txt
+fatal: destination 'folderrename.txt' is not a directory
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git mv \New folder\new_text.txt \New folder\rename.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pnew_text.txt remane.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kstatus
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mnew_text.txt[m
+	[31mtext.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git -A[K[Kadd -A
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -Astatus
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   new_text.txt[m
+	[32mnew file:   text.txt[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status[K[K[K[K[K[K[K[K[K[Kgit clone https://github.com/schacon/simplegit-progit
+Cloning into 'simplegit-progit'...
+remote: Enumerating objects: 13, done.[K
+remote: Total 13 (delta 0), reused 0 (delta 0), pack-reused 13[K
+Unpacking objects:   7% (1/13)Unpacking objects:  15% (2/13)Unpacking objects:  23% (3/13)Unpacking objects:  30% (4/13)Unpacking objects:  38% (5/13)Unpacking objects:  46% (6/13)Unpacking objects:  53% (7/13)Unpacking objects:  61% (8/13)Unpacking objects:  69% (9/13)Unpacking objects:  76% (10/13)Unpacking objects:  84% (11/13)Unpacking objects:  92% (12/13)Unpacking objects: 100% (13/13)Unpacking objects: 100% (13/13), 1.55 KiB | 79.00 KiB/s, done.
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git log
+[?1h=[33mcommit d5a4f9e809a4f3e4ab2794f2cd8c93650010a523[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: Aditya Singh <aditya.singh@tigeranalytics.com>[m
+Date:   Wed Jun 22 13:33:06 2022 +0530[m
+[m
+    my first commit after adding readme and ignore file[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git log -p -1
+[?1h=[33mcommit d5a4f9e809a4f3e4ab2794f2cd8c93650010a523[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: Aditya Singh <aditya.singh@tigeranalytics.com>[m
+Date:   Wed Jun 22 13:33:06 2022 +0530[m
+[m
+    my first commit after adding readme and ignore file[m
+[m
+[1mdiff --git a/.gitignore b/.gitignore[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..9ddbdee[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/.gitignore[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32mignore_this_file.a[m[m
+\ No newline at end of file[m[m
+[1mdiff --git a/README b/README[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..193f02e[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/README[m[m
+[36m@@ -0,0 +1,3 @@[m[m
+[32m+[m[32mmy_git_project[m[m
+[32m+[m[m
+[32m+[m[32mI am writting this to see the difference b/w git status and git diff.[m[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git log -p -1[K[K[K
+[?1h=[33mcommit d5a4f9e809a4f3e4ab2794f2cd8c93650010a523[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: Aditya Singh <aditya.singh@tigeranalytics.com>[m
+Date:   Wed Jun 22 13:33:06 2022 +0530[m
+[m
+    my first commit after adding readme and ignore file[m
+[m
+[1mdiff --git a/.gitignore b/.gitignore[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..9ddbdee[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/.gitignore[m[m
+[36m@@ -0,0 +1 @@[m[m
+[32m+[m[32mignore_this_file.a[m[m
+\ No newline at end of file[m[m
+[1mdiff --git a/README b/README[m[m
+[1mnew file mode 100644[m[m
+[1mindex 0000000..193f02e[m[m
+[1m--- /dev/null[m[m
+[1m+++ b/README[m[m
+[36m@@ -0,0 +1,3 @@[m[m
+[32m+[m[32mmy_git_project[m[m
+[32m+[m[m
+[32m+[m[32mI am writting this to see the difference b/w git status and git diff.[m[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# log[K[K[Kgit log --stat
+[?1h=[33mcommit d5a4f9e809a4f3e4ab2794f2cd8c93650010a523[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m[m
+Author: Aditya Singh <aditya.singh@tigeranalytics.com>[m
+Date:   Wed Jun 22 13:33:06 2022 +0530[m
+[m
+    my first commit after adding readme and ignore file[m
+[m
+ .gitignore | 1 [32m+[m[m
+ README     | 3 [32m+++[m[m
+ 2 files changed, 4 insertions(+)[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git log --pretty=oneline
+[?1h=[33md5a4f9e809a4f3e4ab2794f2cd8c93650010a523[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m my first commit after adding readme and ignore file[m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git log --pretty=format: --graph
+[?1h=* [m
+[K[?1l>]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git log --pretty=format: --graph[8Ponelinestat[Kp[K -1[Kclone https://github.com/schacon/simplegit-progit[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[K
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   new_text.txt[m
+	[32mnew file:   text.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31msimplegit-progit/[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add -A
+warning: adding embedded git repository: simplegit-progit
+[33mhint: You've added another git repository inside your current repository.[m
+[33mhint: Clones of the outer repository will not contain the contents of[m
+[33mhint: the embedded repository and will not know how to obtain it.[m
+[33mhint: If you meant to add a submodule, use:[m
+[33mhint: [m
+[33mhint: 	git submodule add <url> simplegit-progit[m
+[33mhint: [m
+[33mhint: If you added this path by mistake, you can remove it from the[m
+[33mhint: index with:[m
+[33mhint: [m
+[33mhint: 	git rm --cached simplegit-progit[m
+[33mhint: [m
+[33mhint: See "git help submodule" for more information.[m
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git rm --cached simplegit-progit/[K
+error: the following file has staged content different from both the
+file and the HEAD:
+    simplegit-progit
+(use -f to force removal)
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git rm --cached simplegit-progitadd -A[Kstatus
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   new_text.txt[m
+	[32mnew file:   simplegit-progit[m
+	[32mnew file:   text.txt[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# rm -f simplegit-progit/[K
+rm: cannot remove 'simplegit-progit': Is a directory
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# rm -d simplegit-progit/[K
+rm: cannot remove 'simplegit-progit': Directory not empty
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# rm -d simplegit-progit/
+rm: cannot remove 'simplegit-progit/': Directory not empty
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# rm -d simplegit-progit/[Kf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pgit status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   new_text.txt[m
+	[32mnew file:   simplegit-progit[m
+	[32mnew file:   text.txt[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git commit --amend
+hint: Waiting for your editor to close the file... [?2004h[?1049h[22;0;0t[1;35r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[33;68H(B[0;7m[ Reading... ](B[m[33;67H(B[0;7m[ Read 18 lines ](B[m[H(B[0;7m  GNU nano 4.8                                            /root/New folder/.git/COMMIT_EDITMSG                                                       [1;148H(B[m[34d(B[0;7m^G(B[m Get Help     (B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify[81G(B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[34;113H(B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35d(B[0;7m^X(B[m Exit[35;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[35;113H(B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2d[39;49m(B[mmy first commit after adding readme and ignore file[4d[36m# Please enter the commit message for your changes. Lines starting[5d# with '#' will be ignored, and an empty message aborts the commit.[6d#[7d# Date:      Wed Jun 22 13:33:06 2022 +0530[8d#[9d# On branch master[10d#[11d# Initial commit[12d#[13d# Changes to be committed:[14d#       new file:   .gitignore[15d#       new file:   README[16d#       new file:   new_text.txt[17d#       new file:   simplegit-progit[18d#       new file:   text.txt[19d#[2d[39m(B[m[?12l[?25h[?25l[1;140H(B[0;7mModified(B[m[2d my first commit after adding readme and ignore file [?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25lu my first commit after adding readme and ignore fileu[?12l[?25h[?25ls my first commit after adding readme and ignore fileus[?12l[?25h[?25le my first commit after adding readme and ignore fileuse[?12l[?25h[?25l  my first commit after adding readme and ignore file[5G[?12l[?25h[?25lo my first commit after adding readme and ignore file[6G[?12l[?25h[?25lf my first commit after adding readme and ignore file[7G[?12l[?25h[?25l  my first commit after adding readme and ignore file[8G[?12l[?25h[?25la my first commit after adding readme and ignore file[2;9H[?12l[?25h[?25lm my first commit after adding readme and ignore file[2;10H[?12l[?25h[?25le my first commit after adding readme and ignore file[2;11H[?12l[?25h[?25ln my first commit after adding readme and ignore file[2;12H[?12l[?25h[?25ld my first commit after adding readme and ignore file[2;13H[?12l[?25h[?25l  my first commit after adding readme and ignore file[2;14H[?12l[?25h[?25lc my first commit after adding readme and ignore file[2;15H[?12l[?25h[?25lo my first commit after adding readme and ignore file[2;16H[?12l[?25h[?25lm my first commit after adding readme and ignore file[2;17H[?12l[?25h[?25lmm my first commit after adding readme and ignore file[2;18H[?12l[?25h[?25la my first commit after adding readme and ignore file[2;19H[?12l[?25h[?25ln my first commit after adding readme and ignore file[33d[K[2;20H[?12l[?25h[?25ld my first commit after adding readme and ignore file[2;21H[?12l[?25h[?25l  my first commit after adding readme and ignore file[2;22H[?12l[?25h[?25lt my first commit after adding readme and ignore file[2;23H[?12l[?25h[?25lo my first commit after adding readme and ignore file[2;24H[?12l[?25h[?25l  my first commit after adding readme and ignore file[2;25H[?12l[?25h[?25lr my first commit after adding readme and ignore file[2;26H[?12l[?25h[?25le my first commit after adding readme and ignore file[2;27H[?12l[?25h[?25ld my first commit after adding readme and ignore file[2;28H[?12l[?25h[?25lo my first commit after adding readme and ignore file[2;29H[?12l[?25h[?25l  my first commit after adding readme and ignore file[2;30H[?12l[?25h[?25lt my first commit after adding readme and ignore file[2;31H[?12l[?25h[?25lh my first commit after adding readme and ignore file[2;32H[?12l[?25h[?25le my first commit after adding readme and ignore file[2;33H[?12l[?25h[?25l  my first commit after adding readme and ignore file[2;34H[?12l[?25h[?25lc my first commit after adding readme and ignore file[2;35H[?12l[?25h[?25lo my first commit after adding readme and ignore file[2;36H[?12l[?25h[?25lm my first commit after adding readme and ignore file[2;37H[?12l[?25h[?25li my first commit after adding readme and ignore file[2;38H[?12l[?25h[?25lt my first commit after adding readme and ignore file[2;39H[?12l[?25h[?25l: my first commit after adding readme and ignore file[2;40H[?12l[?25h[?25l- my first commit after adding readme and ignore file[2;41H[?12l[?25h[?25l  my first commit after adding readme and ignore file[2;42H[?12l[?25h[?25l[34;17H[21X[34;38H(B[0;7mM-D(B[m DOS Format[23X[34;75H(B[0;7mM-A(B[m Append      [97G        [112G(B[0;7mM-B(B[m Backup File[K[35;2H(B[0;7mC(B[m Cancel[17G[21X[35;38H(B[0;7mM-M(B[m Mac Format[23X[35;75H(B[0;7mM-P(B[m Prepend[19X[35;112H(B[0;7m^T(B[m To Files[K[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG                                                                                             [33;1H(B[m[33;57H[?12l[?25h[?25l[33;57H[?12l[?25h[?25l[33;67H[1K (B[0;7m[ Writing... ](B[m[K[1;140H(B[0;7m        (B[m[33;66H(B[0;7m[ Wrote 18 lines ](B[m[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2;42H[?12l[?25h[?25l[1;140H(B[0;7mModified(B[m[2;41H[1P[?12l[?25h[?25l[34;17H[21X[34;38H(B[0;7mM-D(B[m DOS Format[23X[34;75H(B[0;7mM-A(B[m Append      [97G        [112G(B[0;7mM-B(B[m Backup File[K[35;2H(B[0;7mC(B[m Cancel[17G[21X[35;38H(B[0;7mM-M(B[m Mac Format[23X[35;75H(B[0;7mM-P(B[m Prepend[19X[35;112H(B[0;7m^T(B[m To Files[K[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG                                                                                             [33;1H(B[m[33;57H[?12l[?25h[?25l[33;57H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2;41H[?12l[?25h[?25l7[3;32r8[3dM[1;35r[2;42H[K[3d my first commit after adding readme and ignore file[?12l[?25h[?25l[3;32r[32;1H
+[1;35r[2;42Hmy first commit after adding readme and ignore file[2;41H[?12l[?25h[?25l[34;17H[21X[34;38H(B[0;7mM-D(B[m DOS Format[23X[34;75H(B[0;7mM-A(B[m Append      [97G        [112G(B[0;7mM-B(B[m Backup File[K[35;2H(B[0;7mC(B[m Cancel[17G[21X[35;38H(B[0;7mM-M(B[m Mac Format[23X[35;75H(B[0;7mM-P(B[m Prepend[19X[35;112H(B[0;7m^T(B[m To Files[K[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG                                                                                             [33;1H(B[m[33;57H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2;41H[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                                [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Get Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m To Files[33d(B[0;7mFile Name to Write: /root/New folder/.git/COMMIT_EDITMSG(B[m[33;57H[?12l[?25h[?25l[33;67H[1K (B[0;7m[ Writing... ](B[m[K[1;140H(B[0;7m        (B[m[33;66H(B[0;7m[ Wrote 18 lines ](B[m[J[35d[?12l[?25h[35;1H[?1049l[23;0;0t[?1l>[?2004l[K[master fef7983] use of amend command to redo the comit:- my first commit after adding readme and ignore file
+ Date: Wed Jun 22 13:33:06 2022 +0530
+ 5 files changed, 6 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README
+ create mode 100644 new_text.txt
+ create mode 160000 simplegit-progit
+ create mode 100644 text.txt
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git commit --amend[8Pstatus
+On branch master
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   new_text.txt[m
+	[31mmodified:   text.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add*
+git: 'add*' is not a git command. See 'git --help'.
+
+The most similar command is
+	add
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add*[K *
+The following paths are ignored by one of your .gitignore files:
+ignore_this_file.a
+Use -f if you really want to add them.
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add *
+The following paths are ignored by one of your .gitignore files:
+ignore_this_file.a
+Use -f if you really want to add them.
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git add *[1P*status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   new_text.txt[m
+	[32mmodified:   text.txt[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git reset new_text.txt 
+Unstaged changes after reset:
+M	new_text.txt
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git reset new_text.txt status[K
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   text.txt[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   new_text.txt[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   text.txt[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   new_text.txt[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git checkout --tex[K[K[K text.txt 
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git checkout -- text.txt status[K
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   text.txt[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   new_text.txt[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git statuscheckout -- text.txt [K[K[K[K[K[K[K[K[Knew_text.txt 
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git checkout -- new_text.txt status[K
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mmodified:   text.txt[m
+
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git reset text.txt 
+Unstaged changes after reset:
+M	text.txt
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git reset text.txt [9Pstatus
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   text.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git checkout -- text.txt 
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git checkout -- text.txt status[K
+On branch master
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git remote
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git clone https://github.com/schacon/ticgit
+Cloning into 'ticgit'...
+remote: Enumerating objects: 1857, done.[K
+Receiving objects:   0% (1/1857)Receiving objects:   1% (19/1857)Receiving objects:   2% (38/1857)Receiving objects:   3% (56/1857)Receiving objects:   4% (75/1857)Receiving objects:   5% (93/1857)Receiving objects:   6% (112/1857)Receiving objects:   7% (130/1857)Receiving objects:   8% (149/1857)Receiving objects:   9% (168/1857)Receiving objects:  10% (186/1857)Receiving objects:  11% (205/1857)Receiving objects:  12% (223/1857)Receiving objects:  13% (242/1857)Receiving objects:  14% (260/1857)Receiving objects:  15% (279/1857)Receiving objects:  16% (298/1857)Receiving objects:  17% (316/1857)Receiving objects:  18% (335/1857)Receiving objects:  19% (353/1857)Receiving objects:  20% (372/1857)Receiving objects:  21% (390/1857)Receiving objects:  22% (409/1857)Receiving objects:  23% (428/1857)Receiving objects:  24% (446/1857)Receiving objects:  25% (465/1857)Receiving objects:  26% (483/1857)Receiving objects:  27% (502/1857)Receiving objects:  28% (520/1857)Receiving objects:  29% (539/1857)Receiving objects:  30% (558/1857)Receiving objects:  31% (576/1857)Receiving objects:  32% (595/1857)Receiving objects:  33% (613/1857)Receiving objects:  34% (632/1857)Receiving objects:  35% (650/1857)Receiving objects:  36% (669/1857)Receiving objects:  37% (688/1857)Receiving objects:  38% (706/1857)Receiving objects:  39% (725/1857)Receiving objects:  40% (743/1857)Receiving objects:  41% (762/1857)Receiving objects:  42% (780/1857)Receiving objects:  43% (799/1857)Receiving objects:  44% (818/1857)Receiving objects:  45% (836/1857)Receiving objects:  46% (855/1857)Receiving objects:  47% (873/1857)Receiving objects:  48% (892/1857)Receiving objects:  49% (910/1857)Receiving objects:  50% (929/1857)Receiving objects:  51% (948/1857)Receiving objects:  52% (966/1857)Receiving objects:  53% (985/1857)Receiving objects:  54% (1003/1857)Receiving objects:  55% (1022/1857)Receiving objects:  56% (1040/1857)Receiving objects:  57% (1059/1857)Receiving objects:  58% (1078/1857)Receiving objects:  59% (1096/1857)Receiving objects:  60% (1115/1857)Receiving objects:  61% (1133/1857)Receiving objects:  62% (1152/1857)Receiving objects:  63% (1170/1857)Receiving objects:  64% (1189/1857)Receiving objects:  65% (1208/1857)Receiving objects:  66% (1226/1857)Receiving objects:  67% (1245/1857)remote: Total 1857 (delta 0), reused 0 (delta 0), pack-reused 1857[K
+Receiving objects:  68% (1263/1857)Receiving objects:  69% (1282/1857)Receiving objects:  70% (1300/1857)Receiving objects:  71% (1319/1857)Receiving objects:  72% (1338/1857)Receiving objects:  73% (1356/1857)Receiving objects:  74% (1375/1857)Receiving objects:  75% (1393/1857)Receiving objects:  76% (1412/1857)Receiving objects:  77% (1430/1857)Receiving objects:  78% (1449/1857)Receiving objects:  79% (1468/1857)Receiving objects:  80% (1486/1857)Receiving objects:  81% (1505/1857)Receiving objects:  82% (1523/1857)Receiving objects:  83% (1542/1857)Receiving objects:  84% (1560/1857)Receiving objects:  85% (1579/1857)Receiving objects:  86% (1598/1857)Receiving objects:  87% (1616/1857)Receiving objects:  88% (1635/1857)Receiving objects:  89% (1653/1857)Receiving objects:  90% (1672/1857)Receiving objects:  91% (1690/1857)Receiving objects:  92% (1709/1857)Receiving objects:  93% (1728/1857)Receiving objects:  94% (1746/1857)Receiving objects:  95% (1765/1857)Receiving objects:  96% (1783/1857)Receiving objects:  97% (1802/1857)Receiving objects:  98% (1820/1857)Receiving objects:  99% (1839/1857)Receiving objects: 100% (1857/1857)Receiving objects: 100% (1857/1857), 334.06 KiB | 2.98 MiB/s, done.
+Resolving deltas:   0% (0/837)Resolving deltas:   1% (9/837)Resolving deltas:   2% (19/837)Resolving deltas:   3% (30/837)Resolving deltas:   4% (34/837)Resolving deltas:   5% (44/837)Resolving deltas:  17% (148/837)Resolving deltas:  18% (154/837)Resolving deltas:  19% (161/837)Resolving deltas:  20% (170/837)Resolving deltas:  21% (178/837)Resolving deltas:  22% (185/837)Resolving deltas:  24% (204/837)Resolving deltas:  25% (211/837)Resolving deltas:  26% (219/837)Resolving deltas:  27% (226/837)Resolving deltas:  29% (245/837)Resolving deltas:  30% (252/837)Resolving deltas:  31% (261/837)Resolving deltas:  32% (275/837)Resolving deltas:  33% (279/837)Resolving deltas:  34% (286/837)Resolving deltas:  36% (305/837)Resolving deltas:  37% (314/837)Resolving deltas:  38% (324/837)Resolving deltas:  39% (327/837)Resolving deltas:  40% (336/837)Resolving deltas:  41% (347/837)Resolving deltas:  42% (352/837)Resolving deltas:  43% (366/837)Resolving deltas:  44% (371/837)Resolving deltas:  46% (390/837)Resolving deltas:  47% (396/837)Resolving deltas:  48% (402/837)Resolving deltas:  49% (411/837)Resolving deltas:  50% (421/837)Resolving deltas:  51% (434/837)Resolving deltas:  52% (439/837)Resolving deltas:  53% (449/837)Resolving deltas:  54% (459/837)Resolving deltas:  55% (468/837)Resolving deltas:  56% (469/837)Resolving deltas:  57% (478/837)Resolving deltas:  59% (494/837)Resolving deltas:  60% (504/837)Resolving deltas:  63% (531/837)Resolving deltas:  68% (576/837)Resolving deltas:  69% (579/837)Resolving deltas:  70% (587/837)Resolving deltas:  71% (599/837)Resolving deltas:  72% (603/837)Resolving deltas:  73% (619/837)Resolving deltas:  74% (620/837)Resolving deltas:  75% (629/837)Resolving deltas:  77% (651/837)Resolving deltas:  78% (654/837)Resolving deltas:  79% (664/837)Resolving deltas:  80% (670/837)Resolving deltas:  81% (682/837)Resolving deltas:  82% (694/837)Resolving deltas:  83% (700/837)Resolving deltas:  84% (704/837)Resolving deltas:  85% (716/837)Resolving deltas:  87% (732/837)Resolving deltas:  88% (743/837)Resolving deltas:  89% (746/837)Resolving deltas:  90% (758/837)Resolving deltas:  91% (767/837)Resolving deltas:  92% (771/837)Resolving deltas:  93% (780/837)Resolving deltas: 100% (837/837)Resolving deltas: 100% (837/837), done.
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# git clone https://github.com/schacon/ticgitremote[K
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# cd i[Kt
+text.txt  ticgit/   
+]0;root@TIGER03346: ~/my_git_projectroot@TIGER03346:~/my_git_project# cd ticgit
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remn[Kote
+origin
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote add pb https://github.com/schacon/ticgit
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+pb	https://github.com/schacon/ticgit (fetch)
+pb	https://github.com/schacon/ticgit (push)
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git fetch bp[K[Kpb
+From https://github.com/schacon/ticgit
+ * [new branch]      master     -> pb/master
+ * [new branch]      ticgit     -> pb/ticgit
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git fetch pb[K[K[K[K[K[K[K[Kstatus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git push origin master
+Username for 'https://github.com': Aditya Singjh  h
+Password for 'https://Aditya Singh@github.com': 
+fremote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/schacon/ticgit/'
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# f
+f: command not found
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# fgit push origin master
+Username for 'https://github.com': Aditya Singh      -Singh-3757
+Password for 'https://Aditya-Singh-3757@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/schacon/ticgit/'
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# M[Kgit push origin master
+Username for 'https://github.com': Aditya-Singh-3757
+Password for 'https://Aditya-Singh-3757@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/schacon/ticgit/'
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote show origin
+* remote origin
+  Fetch URL: https://github.com/schacon/ticgit
+  Push  URL: https://github.com/schacon/ticgit
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    ticgit tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# gir remote rem[Kname pb to paul
+
+Command 'gir' not found, did you mean:
+
+  command 'gpr' from deb gpr (0.15deb-2build1)
+  command 'dir' from deb coreutils (8.30-3ubuntu2)
+  command 'git' from deb git (1:2.25.1-1ubuntu3.2)
+  command 'gip' from deb gip (1.7.0-1-4build1)
+  command 'gie' from deb proj-bin (6.3.1-1)
+  command 'gid' from deb id-utils (4.6+git20120811-4ubuntu2)
+  command 'gio' from deb libglib2.0-bin (2.64.6-1~ubuntu20.04.4)
+
+Try: apt install <deb name>
+
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# gir[Kt remote rename pb to paul
+usage: git remote rename <old> <new>
+
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote
+origin
+pb
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote rename pb to paul[1P[1P[C[1P paul[C[C[C[C[C
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote rename pb paul[K
+origin
+paul
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remove paul
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote mr[K[Kremove paul
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git remote
+origin
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag
+[?1h=[K[?1l>]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag -l
+[?1h=[K[?1l>]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag --list
+[?1h=[K[?1l>]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag -a v1.4 -m "my version 1.4"
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag
+[?1h=v1.4[m
+[K[?1l>]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git show v1.4
+[?1h=[33mtag v1.4[m[m
+Tagger: Aditya Singh <aditya.singh@tigeranalytics.com>[m
+Date:   Wed Jun 22 16:30:11 2022 +0530[m
+[m
+my version 1.4[m
+[m
+[33mcommit 847256809a3d518cd36b8f81859401416fe8d945[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;33mtag: v1.4[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m[m
+Author: Jeff Welling <Jeff.Welling@Gmail.com>[m
+Date:   Tue Apr 26 17:29:17 2011 -0700[m
+[m
+    Added note to clarify which is the canonical TicGit-ng repo[m
+[m
+[1mdiff --git a/README.mkd b/README.mkd[m[m
+[1mindex ab92035..9ea9ff9 100644[m[m
+[1m--- a/README.mkd[m[m
+[1m+++ b/README.mkd[m[m
+[36m@@ -1,3 +1,6 @@[m[m
+[32m+[m[32mNote: the original TicGit author has pulled all the TicGit-ng changes into his repository, creating a potentially confusing situation. The schacon T[m [32m[m[32micGit repo, this one, is not consistently maintained. For up to date TicGit-ng info and code, check the canonical TicGit-ng repository at[m[41m  [m[m
+[32m+[m[32mhttps://github.com/jeffWelling/ticgit[m[m
+[32m+[m[m
+ ## TicGit-ng ##[m[m
+ [m[m
+ This project provides a ticketing system built on Git that is kept in a[m[m
+[K[?1l>]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag v[C1.4-lw
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag
+[?1h=v1.4[m
+v1.4-lw[m
+[K[?1l>]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git push origin v1.5
+error: src refspec v1.5 does not match any
+[31merror: failed to push some refs to 'https://github.com/schacon/ticgit'
+[m]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git push origin v1.5[K4
+Username for 'https://github.com': Aditya-A Singj g h-3757
+Password for 'https://Aditya-Singh-3757@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/schacon/ticgit/'
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag'[K
+[?1h=v1.4[m
+v1.4-lw[m
+[K[?1l>]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag -d v1.4
+Deleted tag 'v1.4' (was 5a15729)
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag
+[?1h=v1.4-lw[m
+[K[?1l>]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git tag[K[K[Kstatus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git status[3Ptag[K[K[K[K[K[K[Kgit config --global alias.st status
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# gir [K[Kt si
+git: 'si' is not a git command. See 'git --help'.
+
+The most similar command is
+	st
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# git si[K[K[K[K[K[Kloo[Ko[K[K[Kl[Kkindly try to rectify this issue[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kkindly[K[K[K[K[K[Kplease try re[K[K[K[K[K[K[K[K[K[K[K[K[Kwe are hopegu[Kfull that whatever you gyues[K[Ks w[Kcome [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kyou gyus come u[Kup with more sutibale[K[K[Kle way.[K[K[K[Ksoluthio[K[K[Kion for this requesr[Kt.[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit st
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/New folder/ticgitroot@TIGER03346:~/New folder/ticgit# exit
+exit
+
+Script done on 2022-06-22 21:50:08+05:30 [COMMAND_EXIT_CODE="0"]

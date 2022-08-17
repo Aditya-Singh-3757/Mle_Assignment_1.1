@@ -1,0 +1,150 @@
+Script started on 2022-06-24 09:42:34+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="149" LINES="35"]
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git branch to_apply_rebash[Ki[Ke
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git branch all
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git branch --all
+[?1h=  all[m[m
+* [32mmain[m[m
+  new_testing[m[m
+  to_apply_rebase[m[m
+[K[?1l>]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git checkout to_apply_rebase
+D	.test.rb.swp
+Switched to branch 'to_apply_rebase'
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git status
+On branch to_apply_rebase
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mdeleted:    .test.rb.swp[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git rebase mas[K[K[Kmain
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git commit -m "commit deleted file"
+On branch to_apply_rebase
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mdeleted:    .test.rb.swp[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git status
+On branch to_apply_rebase
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mdeleted:    .test.rb.swp[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git checkout ma[Kain
+D	.test.rb.swp
+Switched to branch 'main'
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git commit -m "deleted file"
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mdeleted:    .test.rb.swp[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git checkp[Kout testing
+error: pathspec 'testing' did not match any file(s) known to git
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git checkout new_testing
+D	.test.rb.swp
+Switched to branch 'new_testing'
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git checkout new_testing[4Ptestingommit -m "deleted file"
+On branch new_testing
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mdeleted:    .test.rb.swp[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git add -A
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git add -Acommit -m "deleted file"[4Pheckout new_testing[4Ptestingommit -m "deleted file"[11Pheckout main[7Pstatus
+On branch new_testing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mdeleted:    .test.rb.swp[m
+
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git statusadd -Acommit -m "deleted file"
+[new_testing 5baed11] deleted file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 .test.rb.swp
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git commit -m "deleted file"status[K
+On branch new_testing
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git checkout to_apply_rebaa[Kse
+Switched to branch 'to_apply_rebase'
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git rebase main
+Current branch to_apply_rebase is up to date.
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# git clone https://github.com/Aditya-Singh-3757/blink
+Cloning into 'blink'...
+remote: Enumerating objects: 9, done.[K
+remote: Total 9 (delta 0), reused 0 (delta 0), pack-reused 9[K
+Unpacking objects:  11% (1/9)Unpacking objects:  22% (2/9)Unpacking objects:  33% (3/9)Unpacking objects:  44% (4/9)Unpacking objects:  55% (5/9)Unpacking objects:  66% (6/9)Unpacking objects:  77% (7/9)Unpacking objects:  88% (8/9)Unpacking objects: 100% (9/9)Unpacking objects: 100% (9/9), 1.14 KiB | 389.00 KiB/s, done.
+]0;root@TIGER03346: ~/New folderroot@TIGER03346:~/New folder# cd blink
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git branch slow [K_[K-blink
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git chel[Kckput slow-blink
+git: 'checkput' is not a git command. See 'git --help'.
+
+The most similar command is
+	checkout
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git checkput slow-blink[Kgit checkput slow-blink[C[1P[1@o[C[C[C[C[C[C[C[C[C[C[C[C[C
+Switched to branch 'slow-blink'
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git status
+On branch slow-blink
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git a[Kba[Krac[Knch all
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git bramn[K[Knch --all
+[?1h=  all[m[m
+  master[m[m
+* [32mslow-blink[m[m
+  [31mremotes/origin/HEAD[m -> origin/master[m
+  [31mremotes/origin/master[m[m
+[K[?1l>]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# nano f[Ktext_file_to [K_blink.txt
+[?2004h[?1049h[22;0;0t[1;35r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[33;69H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 4.8                                                   text_file_to_blink.txt                                                              [1;148H(B[m[34d(B[0;7m^G(B[m Get Help     (B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify[81G(B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[34;113H(B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35d(B[0;7m^X(B[m Exit[35;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[35;113H(B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2d[39;49m(B[m[?12l[?25h[?25l[1;140H(B[0;7mModified(B[m[2d"[?12l[?25h[?25lj[?12l[?25h[?25lu[?12l[?25h[?25ls[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25la[?12l[?25h[?25l [?12l[?25h[?25lt[?12l[?25h[?25le[?12l[?25h[?25lx[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25ld[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25li[?12l[?25h[?25ll[?12l[?25h[?25le[?12l[?25h[?25l"[?12l[?25h[?25l[34;17H[21X[34;38H(B[0;7mM-D(B[m DOS Format[23X[34;75H(B[0;7mM-A(B[m Append      [97G        [112G(B[0;7mM-B(B[m Backup File[K[35;2H(B[0;7mC(B[m Cancel[17G[21X[35;38H(B[0;7mM-M(B[m Mac Format[23X[35;75H(B[0;7mM-P(B[m Prepend[19X[35;112H(B[0;7m^T(B[m To Files[K[33d(B[0;7mFile Name to Write: text_file_to_blink.txt                                                                                                           [33;1H(B[m[33;43H[?12l[?25h[?25l[33;43H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[2;19H[?12l[?25h[?25l[3d[?12l[?25h[?25l[34;17H[21X[34;38H(B[0;7mM-D(B[m DOS Format[23X[34;75H(B[0;7mM-A(B[m Append      [97G        [112G(B[0;7mM-B(B[m Backup File[K[35;2H(B[0;7mC(B[m Cancel[17G[21X[35;38H(B[0;7mM-M(B[m Mac Format[23X[35;75H(B[0;7mM-P(B[m Prepend[19X[35;112H(B[0;7m^T(B[m To Files[K[33d(B[0;7mFile Name to Write: text_file_to_blink.txt                                                                                                           [33;1H(B[m[33;43H[?12l[?25h[?25l[33;68H[1K (B[0;7m[ Cancelled ](B[m[K[34;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut Text     (B[0;7m^J(B[m Justify      (B[0;7m^C(B[m Cur Pos[97G(B[0;7mM-U(B[m Undo[112G (B[0;7mM-A(B[m Mark Text   (B[0;7mM-](B[m To Bracket[35;2H(B[0;7mX(B[m Exit  [17G(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace      (B[0;7m^U(B[m Paste Text   (B[0;7m^T(B[m To Spell     (B[0;7m^_(B[m Go To Line   (B[0;7mM-E(B[m Redo[112G (B[0;7mM-6(B[m Copy Text   (B[0;7m^Q(B[m Where Was[33d[3d[?12l[?25h[?25l[4d[?12l[?25h[?25l[33d(B[0;7mSave modified buffer?                                                                                                                                [34;1H Y(B[m Yes[K[35d(B[0;7m N(B[m No  [35;18H(B[0;7mC(B[m Cancel[K[33;23H[?12l[?25h[?25l[34d(B[0;7m^G(B[m Get Help[34;38H(B[0;7mM-D(B[m DOS Format[34;75H(B[0;7mM-A(B[m Append[34;112H(B[0;7mM-B(B[m Backup File[35d(B[0;7m^C(B[m Cancel[17G         [35;38H(B[0;7mM-M(B[m Mac Format[35;75H(B[0;7mM-P(B[m Prepend[35;112H(B[0;7m^T(B[m To Files[33d(B[0;7mFile Name to Write: text_file_to_blink.txt(B[m[33;43H[?12l[?25h[?25l[33;67H[1K (B[0;7m[ Writing... ](B[m[K[1;140H(B[0;7m        (B[m[33;67H(B[0;7m[ Wrote 3 lines ](B[m[J[35d[?12l[?25h[35;1H[?1049l[23;0;0t[?1l>[?2004l]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# gir[Kt status
+On branch slow-blink
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mtext_file_to_blink.txt[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git add -A
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git add -Astatus
+On branch slow-blink
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	[32mnew file:   text_file_to_blink.txt[m
+
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git commint[K[Kt _[K-m "just added one text file to branch to modify it"
+[slow-blink 201ec74] just added one text file to branch to modify it
+ 1 file changed, 3 insertions(+)
+ create mode 100644 text_file_to_blink.txt
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git commit -m "just added one text file to branch to modify it"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[K
+On branch slow-blink
+nothing to commit, working tree clean
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git status[K[K[K[K[K[Kpush p[Korigin slow-blink
+Username for 'https://github.com': aditya      Aditya-Singh-3757
+Password for 'https://Aditya-Singh-3757@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/Aditya-Singh-3757/blink/'
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git push origin slow-blink
+Username for 'https://github.com': ^[[A^[[A        Aditya-Singh-3757
+Password for 'https://Aditya-Singh-3757@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/Aditya-Singh-3757/blink/'
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git push origin slow-blink[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcong[Kfig user.name
+Aditya Singh
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# git config user.namepush origin slow-blink
+Username for 'https://github.com': Aditya SIngh    ingh
+Password for 'https://Aditya Singh@github.com': 
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/Aditya-Singh-3757/blink/'
+]0;root@TIGER03346: ~/New folder/blinkroot@TIGER03346:~/New folder/blink# exit
+exit
+
+Script done on 2022-06-24 21:33:26+05:30 [COMMAND_EXIT_CODE="128"]
